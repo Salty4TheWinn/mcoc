@@ -1,0 +1,5 @@
+*.DS_STORE
+*.json
+*.csv
+functions/__pycache__
+*.DS_Store
