@@ -1,17 +1,9 @@
-'''All functions needed for the backend of MCOC'''
+'''Gets champions from a given number of stars'''
 import json
 
-def init_db():
-    '''Initialize the JSON file '''
-
-    data = {}
-    data['champions'] = []
-
-    with open('data.json', 'w') as json_data:
-        json.dump(data, json_data, indent=2)
-
 def lambda_handler(event, context):
-    return str(event)
+    '''Handler of the function'''
+    return get_champions_by_stars(event['stars'])
 
 def get_champions_by_stars(stars):
     '''Gets champions from a given number of stars'''
