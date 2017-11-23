@@ -9,10 +9,13 @@ def update_champion(name, class_name, rank, stars):
     '''Updates an existing champion in the collection'''
 
     with open('data.json') as json_data:
+        print("HOLA")
         data = json.load(json_data)
 
         champions = data['champions']
         champ = {}
+
+        print("HOLA")
 
         # Check if a champion name already exists:
         flag = False
@@ -25,7 +28,11 @@ def update_champion(name, class_name, rank, stars):
         if flag is False:
             return {}
 
-        stars_data = json.loads(stars)
+        print("HOLA")
+
+        stars_data = stars
+
+        print("HOLA")
 
         champ['name'] = name
         champ['class'] = class_name
